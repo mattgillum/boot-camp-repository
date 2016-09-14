@@ -30,3 +30,28 @@ Error in seq.default(from = 1, to = 3, by.2) : object 'by.2' not found
 > summary(Y)
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    8.30   10.72   11.00   10.54   11.18   11.40 
+   > Names <-c("Sarah", "Yunluan")
+> Names
+[1] "Sarah"   "Yunluan"
+> b<- c(TRUE, FALSE)
+> b
+[1]  TRUE FALSE
+> class (y)
+Error: object 'y' not found
+> class(Y)
+[1] "numeric"
+> class(b)
+[1] "logical"
+> Y>10
+ [1] FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+> Y>mean(Y)
+ [1] FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+> Y==11
+ [1] FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE
+> Y!=
++ Y!=11
+Error: unexpected '!=' in:
+"Y!=
+Y!="
+> Y != 11
+ [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
