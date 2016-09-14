@@ -78,3 +78,76 @@ In a * 1:2 :
 [1] 1 4 3
 > 1:4*1:2
 [1] 1 4 3 8
+> 1:4*1:2
+[1] 1 4 3 8
+> Y[1]
+[1] 8.3
+> Y[1:3]
+[1]  8.3  8.6 10.7
+> Y[Y>mean(Y)]
+[1] 10.7 10.8 11.0 11.0 11.1 11.2 11.3 11.4
+> a<-c(5,3,6, NA)
+> a
+[1]  5  3  6 NA
+> is.na(a)
+[1] FALSE FALSE FALSE  TRUE
+> !is.na(a)
+[1]  TRUE  TRUE  TRUE FALSE
+> a[!is.na(a)]
+[1] 5 3 6
+> na.exclude(a)
+[1] 5 3 6
+attr(,"na.action")
+[1] 4
+attr(,"class")
+[1] "exclude"
+> mean(a)
+[1] NA
+> mean(a. na.rm=TRUE)
+Error: unexpected symbol in "mean(a. na.rm"
+> mean(a. na.rm = TRUE)
+Error: unexpected symbol in "mean(a. na.rm"
+> mean(a. na.rm = TRUE)
+Error: unexpected symbol in "mean(a. na.rm"
+> d<- na.exclude(a)
+> mean(d)
+[1] 4.666667
+> mean(a. na.rm = TRUE)
+Error: unexpected symbol in "mean(a. na.rm"
+> matrix(letters[1:4], ncol = 2)
+     [,1] [,2]
+[1,] "a"  "c" 
+[2,] "b"  "d" 
+> M<- matrix(1:4, nrow = 2)
+> M
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+> M2<- matrix(1:4, nrow = 2, byrow = TRUE)
+> M2
+     [,1] [,2]
+[1,]    1    2
+[2,]    3    4
+> I <- diag(1, nrow = 2)
+> I
+     [,1] [,2]
+[1,]    1    0
+[2,]    0    1
+> Minv <- solv(M)
+Error: could not find function "solv"
+> Minv <- solve(M)
+> M %*% Minv
+     [,1] [,2]
+[1,]    1    0
+[2,]    0    1
+> M[1,2]
+[1] 3
+> M[1,1:2]
+[1] 1 3
+> M[,2]
+[1] 3 4
+> M[,]
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+> 
