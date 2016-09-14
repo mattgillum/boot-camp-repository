@@ -55,3 +55,26 @@ Error: unexpected '!=' in:
 Y!="
 > Y != 11
  [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
+> a<-1:3
+> b<-4:6
+> a+b
+[1] 5 7 9
+> a*b
+[1]  4 10 18
+> a/b
+[1] 0.25 0.40 0.50
+> a+1
+[1] 2 3 4
+> a*2
+[1] 2 4 6
+> 1/a
+[1] 1.0000000 0.5000000 0.3333333
+> a*1:2
+[1] 1 4 3
+Warning message:
+In a * 1:2 :
+  longer object length is not a multiple of shorter object length
+> a*c(1,2,1)
+[1] 1 4 3
+> 1:4*1:2
+[1] 1 4 3 8
